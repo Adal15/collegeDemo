@@ -627,6 +627,10 @@ button:focus {
 /* ==========================================================================
    Main Menu 
    ========================================================================== */
+   /* #heading{
+    padding-left: 30px;
+    left:auto;
+   } */
 .main-navigation {
   position: relative;
   background: #fff;
@@ -644,6 +648,7 @@ button:focus {
   font-size: 14px;
   padding: 25px 20px;
   margin: 0px;
+  margin-left: -19px;
   outline: 0;
   color: #656565;
   font-weight: 400;
@@ -940,6 +945,7 @@ button:focus {
   opacity: 1;
 }
 #carousel-area .active.left,
+
 #carousel-area .active.right {
   left: 0;
   opacity: 0;
@@ -1005,6 +1011,333 @@ button:focus {
 /* ==========================================================================
    Custom Componet
    ========================================================================== */
+
+/* spotlight */
+.scrolling {
+  display: flex;
+  align-items: center;       /* vertically center everything */
+  width: 100%;
+  height: 45px;
+  overflow: hidden;
+  background: rgb(1, 177, 215);
+  color: #fff;
+  font-size: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.scrolling h4 {
+  margin: 0;
+  padding-right: 15px;
+  white-space: nowrap;
+  color:rgb(253, 253, 253);
+  /* background-color: red; */
+}
+
+.scroll-text {
+  position: relative;
+  overflow: hidden;
+  flex: 1;                   /* take remaining horizontal space */
+  height: 100%;              /* match parent height */
+  display: flex;
+  align-items: center;       /* center inner text vertically */
+  color: red;
+}
+
+.scroll-text div {
+  position: absolute;
+  width: 200%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  animation: scroll 6s linear infinite;
+}
+
+.scroll-text span {
+  width: 50%;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;       /* center text vertically within span */
+}
+
+
+@keyframes scroll{
+  0%{
+    left: 0;
+  }
+  100%{
+    left: -100%;
+  }
+}
+/* ==========================================================================
+   Spotlight End
+   ========================================================================== */
+/* ==========================================================================
+   Features Start
+   ========================================================================== */
+/* .features {
+  background: #F9F9F9;
+}
+.features-wrapper {
+  background: #fff;
+  margin-top: -90px;
+  display: inline-block;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 50px 20px 0px;
+  margin-bottom: 80px;
+}
+.features-wrapper .img-thumb {
+  margin-top: 60px;
+}
+.features-main .features-header {
+  margin-bottom: 30px;
+}
+.features-main .info {
+  margin-top: 30px;
+}
+.features-main .info .icon {
+  float: left;
+}
+.features-main .info .content {
+  padding-left: 65px;
+  margin-bottom: 30px;
+}
+.features-main .info .content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+} */
+
+  /* Features Start 
+
+  
+   ========================================================================== */
+/* .features {
+  background: #F9F9F9;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.features-wrapper {
+  background: #fff;
+  margin-top: -10px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 50px 20px;
+  margin-bottom: 80px;
+  border-radius: 8px;
+}
+
+.features-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.features-header p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.features-main .info {
+  margin-top: 30px;
+}
+
+.features-main .info .icon {
+  float: left;
+  font-size: 32px;
+  color: #007bb5;
+  margin-right: 15px;
+}
+
+.features-main .info .content {
+  overflow: hidden;
+}
+
+.features-main .info .content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.features-main .info .content p {
+  font-size: 15px;
+  color: #666;
+}
+
+.img-thumb img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+} */
+  .container2 {
+      display: flex;
+      justify-content:center;
+      align-items: flex-start;
+      gap: -10px; 
+      flex-wrap: wrap;
+      padding-top: 80px;
+      padding-bottom: 55px;
+     
+    }
+    .container2  p{
+      color: #000;
+    }
+
+    /* Hidden checkbox for toggle */
+    #readmore-toggle {
+      display: none;
+    }
+
+    /* LEFT BOX */
+    .content-box2 {
+      flex: 1;
+      min-width: 500px;
+      max-width: 900px;
+      /* height: 295px; */
+      border: 1px solid #bcd;
+      padding: 20px;
+      background: #fff;
+      line-height: 1.6;
+      height: 400px; /* collapsed height */
+      overflow: hidden;
+      position: relative;
+      transition: all 0.3s ease;
+
+    }
+
+    /* Expanded mode */
+    #readmore-toggle:checked ~ .content-box2 {
+      height: auto;
+      overflow: visible;
+    }
+
+    /* Fade gradient for collapsed view */
+    .content-box2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      /* background: linear-gradient(to bottom, transparent, #fff); */
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    #readmore-toggle:checked ~ .content-box2::after {
+      opacity: 0;
+    }
+
+    /* Toggle link styles */
+    .toggle-link {
+      display: inline-block;
+      color: #007bb5;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .toggle-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Hide/show appropriate link */
+    .show-less {
+      display: none;
+    }
+
+    #readmore-toggle:checked ~ .content-box2 .show-less {
+      display: inline;
+    }
+
+    #readmore-toggle:checked ~ .content-box2 .show-more {
+      display: none;
+    }
+
+    /* Place toggle links */
+    .toggle-wrapper {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      background: #fff;
+    }
+
+    #readmore-toggle:checked ~ .content-box2 .toggle-wrapper {
+      position: static;
+      margin-top: 10px;
+    }
+
+    /* NOTICE BOARD */
+    .notice-board {
+      width: 320px;
+      border: 1px solid #bcd;
+      background: #fff;
+      flex-shrink: 0;
+      height: 295px;
+    }
+
+    .notice-header {
+      background: #c8eaf5;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .notice-content {
+      max-height: 250px;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    .notice-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      border-bottom: 1px dashed #ccc;
+      padding-bottom: 8px;
+    }
+
+    .notice-item img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      margin-right: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .notice-item a {
+      color: #007bb5;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .notice-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .notice-board {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .content-box2 {
+        min-width: unset;
+        width: 100%;
+      }
+    }
+/* ==========================================================================
+   Features End
+   ========================================================================== */
+
 /* ==========================================================================
    Activity Area Start
    ========================================================================== */
@@ -1048,41 +1381,7 @@ button:focus {
   border-color: transparent!important;
   box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
-/* ==========================================================================
-   Features Start
-   ========================================================================== */
-.features {
-  background: #F9F9F9;
-}
-.features-wrapper {
-  background: #fff;
-  margin-top: -90px;
-  display: inline-block;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  padding: 50px 20px 0px;
-  margin-bottom: 80px;
-}
-.features-wrapper .img-thumb {
-  margin-top: 60px;
-}
-.features-main .features-header {
-  margin-bottom: 30px;
-}
-.features-main .info {
-  margin-top: 30px;
-}
-.features-main .info .icon {
-  float: left;
-}
-.features-main .info .content {
-  padding-left: 65px;
-  margin-bottom: 30px;
-}
-.features-main .info .content h3 {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
+
 /* ==========================================================================
    Courses Section Style
    ========================================================================== */
@@ -1190,8 +1489,9 @@ button:focus {
 .coaching-courses {
   background: url(../img/background/parallax-1.jpg) #eeeeee;
   background-size: cover;
+  padding-bottom: 40px;
 }
-.coaching-courses .coaching-wrapper {
+/* .coaching-courses .coaching-wrapper {
   padding: 68px 30px;
 }
 .coaching-courses .coaching-wrapper h3 {
@@ -1232,12 +1532,23 @@ button:focus {
 }
 .coaching-courses .timer {
   margin-top: 30px;
+} */
+.coaching-courses .row {
+  display: flex;
+  justify-content: center; /* centers horizontally */
 }
+
+.coaching-courses .col-md-5 {
+  float: none; /* remove default float if using Bootstrap 3 */
+}
+
+
 .coaching-courses .box {
   padding: 30px;
   box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.075);
   text-align: center;
   background: #fff;
+  
 }
 .coaching-courses .box .form-group {
   margin-bottom: 30px;
@@ -1253,14 +1564,101 @@ button:focus {
   color: #212121;
 }
 /* ==========================================================================
+   Search Courses Style END
+   ========================================================================== */
+
+/* ======================HOW OCE INDIA START ==================================*/
+.help-section {
+  background-color: #01b1d7;
+  border: 1px solid #01b1d7;
+  text-align: center;
+  align-items: center;
+  padding: 15px 0;
+  width: 80%;
+  margin: 40px auto 0 auto; /* centers horizontally */
+  border-radius: 8px; 
+  /* padding-top: 80px; */
+}
+
+
+/* Title bar */
+.help-section .section-title {
+  background-color: #01b1d7;
+  padding: 10px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Flex container for boxes */
+.help-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #fff;
+  padding: 30px 0;
+}
+
+/* Each box */
+.help-box {
+  flex: 1 1 200px;
+  max-width: 250px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #e6f6fa;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.help-box i {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.help-box h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #212121;
+  margin: 10px 0;
+}
+
+.help-box p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .help-boxes {
+    flex-direction: column;
+  }
+  .help-box {
+    max-width: 100%;
+  }
+}
+ /* ======================HOW OCE INDIA End ==================================*/
+
+
+
+/* ==========================================================================
    Why Chooses Style
    ========================================================================== */
-.why-choose {
+/* .why-choose {
   padding-top: 80px;
+  text-align: center;
 }
 .why-wrap {
   display: inline-block;
   margin: 30px 0;
+  text-align: center;
+  text-align: left;
+}
+.row{
+  text-align: center;
+  margin: 0 auto;
 }
 .why-wrap i {
   float: left;
@@ -1281,7 +1679,92 @@ button:focus {
 }
 .why-wrap:hover h4 a {
   color: #436eee;
+} */
+       /* Section styling */
+.why-choose {
+  padding: 80px 0;
+  text-align: center;
+  background: #fff;
 }
+
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #212121;
+  text-transform: uppercase;
+}
+
+/* Row styling */
+.why-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers content horizontally */
+  gap: 40px; /* space between cards */
+  max-width: 900px; /* keeps content centered and neat */
+  margin: 0 auto;
+}
+
+/* Individual box */
+.why-wrap {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  text-align: left;
+}
+
+/* Icon style */
+.why-wrap .icon {
+  width: 60px;
+  height: 60px;
+  /* background: #00bcd4; */
+  color: #fff;
+  border-radius: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-right: 20px;
+}
+
+/* Text part */
+.why-text h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.why-text h4 a {
+  color: #212121;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.why-wrap:hover h4 a {
+  color: #00bcd4;
+}
+
+.why-text p {
+  margin: 5px 0 0;
+  font-size: 15px;
+  color: #757575;
+  line-height: 1.6;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .why-wrap {
+    width: 100%;
+    justify-content: center;
+  }
+  .why-row {
+    gap: 30px;
+  }
+}
+
+
+
+
 /* ==========================================================================
     Counter Style
     ========================================================================== */
@@ -1510,7 +1993,7 @@ button:focus {
 /* ==========================================================================
    News Section Style
    ========================================================================== */
-.latest-news img {
+/* .latest-news img {
   width: 100%;
 }
 .news-grid-item {
@@ -1555,7 +2038,40 @@ button:focus {
 }
 .news-grid-item:hover {
   box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+} */
+
+
+.Gallery{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  
 }
+.gall{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 0px;
+            
+        }
+        .gall img{
+            width: 400px;
+            height: 200px;
+            border: 2px solid #ff3d0354;
+            border-radius: 13px;
+            box-shadow: 4px 7px 7px 0px #00000042;
+            cursor: pointer;
+            margin: 10px;
+            transition: 400ms;
+        }
+
+        .gall img:hover{
+            
+            transform: scale(1.06);
+        }
+
+
+
 /* ==========================================================================
    NewsLetter Section Style
    ========================================================================== */
