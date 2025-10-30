@@ -545,7 +545,7 @@ button:focus {
   /* --- Centering Rules --- */
   position: absolute;
   top: 0;
-  /* left: 50%;
+  left: 0%;
   
   /* --- Sizing and Alignment --- */
   height: 100%; /* Makes it the full height of the navbar */
@@ -627,10 +627,7 @@ button:focus {
 /* ==========================================================================
    Main Menu 
    ========================================================================== */
-   /* #heading{
-    padding-left: 30px;
-    left:auto;
-   } */
+   
 .main-navigation {
   position: relative;
   background: #fff;
@@ -848,11 +845,6 @@ button:focus {
   background-repeat: no-repeat;
   
 }
-#Text {
-  color:#01B1D7 !important;
-}
-
-
 #carousel-area {
   overflow: hidden;
   background: #2c3e50;
