@@ -71,6 +71,7 @@ $(window).load(function() {
       parentTag: 'liner',
       allowParentLinks: true,
       duplicate: true,
+    
       label: '',
       closedSymbol: '<i class="fa fa-angle-right"></i>',
       openedSymbol: '<i class="fa fa-angle-down"></i>',

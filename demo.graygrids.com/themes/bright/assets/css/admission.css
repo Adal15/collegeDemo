@@ -1,0 +1,129 @@
+/* body {
+  font-family: "Georgia", serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+} */
+
+.containerad {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contentad {
+  flex: 3;
+  padding: 30px;
+  border-right: 1px solid #ddd;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h3 {
+  color: #333;
+  font-weight: 100;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+section h3{
+  font-size:large;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 40px;
+  line-height: 1.7;
+  color: #444;
+  /* list-style-type: none; */
+  
+
+}
+
+.contentad ul {
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+ 
+
+/* Custom bullet using pseudo-element — place at very end of admission.css */
+
+/* Hide default marker (avoid duplicate depending on browser) */
+.contentad ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Create custom bullet and align text */
+.contentad ul li {
+  display: block !important;
+  position: relative;
+  padding-left: 1.6em;       /* space for the bullet */
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* the bullet */
+.contentad ul li::before {
+  content: "\2022";          /* bullet character */
+  position: absolute;
+  left: 0;
+  top: 0.12em;               /* tweak vertical alignment */
+  font-size: 1.2em;
+  line-height: 1;
+  color: #333;               /* bullet color — change as you like */
+}
+
+.contentad ul li[style*="display:flex"], 
+.contentad ul li[style*="display: -webkit-box"] {
+  display: flex !important;
+  align-items: flex-start;
+}
+.contentad ul li[style*="display:flex"]::before,
+.contentad ul li[style*="display: -webkit-box"]::before {
+  position: relative;
+  margin-right: 0.5rem;
+  left: 0;
+  top: 0;
+}
+
+p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.sidebar {
+  flex: 1;
+  background: #e8f7fc;
+  padding: 20px;
+}
+
+.gallery-header {
+  /* background: #9ee0f7; */
+  text-transform: uppercase;
+  padding: 10px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
